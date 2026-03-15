@@ -5,26 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./src/assets/styles/login.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/iconoir-icons/iconoir@main/css/iconoir.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <title>Login</title>
 </head>
 
 <body>
     <main>
-        <h1>Login</h1>
-        <form id="form-login" method="post">
-            <div class="login-usuario">
-                <input type="text" placeholder="Usuário" name="usuario" id="usuario" maxlength="12" required>
+        <div class="container">
+            <div class="card p-4 shadow">
+                <h1 class="text-center pb-4">Login</h1>
+                <div class="row">
+                    <div class="column">
+                        <form id="form-login" method="post">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Usuário" name="usuario"
+                                    id="usuario" maxlength="12" required>
+                            </div>
+                            <div class="input-group mb-3">
+                                <input type="password" class="form-control" name="senha" id="senha"
+                                    maxlength="4" placeholder="Senha" required>
+                                <button class="btn btn-light" type="button" id="togglePassword">
+                                    <i class="bi bi-eye-slash" id="toggleIcon"></i>
+                                </button>
+                            </div>
+                            <button type="submit" id="btn-entrar" class="btn btn-dark w-100">Entrar</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <div class="login-senha">
-                <input type="password" name="senha" id="senha" maxlength="4" size='4' placeholder="Senha" required>
-                <span id="mostrar-senha" class="iconoir-eye-solid"></span>
-            </div>
-            <button type="submit" id="btn-entrar">Entrar</button>
-        </form>
+        </div>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="./src/assets/scripts/login.js"></script>
 </body>
 
